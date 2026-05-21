@@ -2,8 +2,8 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form Penawaran Barang / Jasa  — CV. Permata Teknik Solution</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Form Penawaran Barang / Jasa — CV. Permata Teknik Solution</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -12,31 +12,31 @@
     --text: #000000; --text-muted: #555555; --text-label: #000000; --error: #c0392b;
     --shadow: 0 4px 20px rgba(0,0,0,0.04); --shadow-lg: 0 8px 32px rgba(0,0,0,0.12); --radius: 8px;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 0 0 60px; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 0 0 80px; }
 
-  .page-header { background: var(--accent); color: white; padding: 28px 40px 24px; display: flex; align-items: center; gap: 20px; position: relative; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-  .page-header::before { content: ''; position: absolute; right: -40px; top: -40px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.06); }
-  .header-logo { width: 52px; height: 52px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+  .page-header { background: var(--accent); color: white; padding: 24px 20px; display: flex; align-items: center; gap: 16px; position: relative; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); flex-wrap: wrap; }
+  .page-header::before { content: ''; position: absolute; right: -40px; top: -40px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.06); pointer-events: none; }
+  .header-logo { width: 48px; height: 48px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
   .header-logo img { width: 100%; height: 100%; object-fit: contain; }
-  .header-logo-fallback { font-family: 'Fraunces', serif; font-size: 22px; color: var(--accent); font-weight: 700; }
-  .header-text h1 { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
-  .header-text p { font-size: 13px; opacity: 0.9; margin-top: 2px; }
+  .header-logo-fallback { font-family: 'Fraunces', serif; font-size: 20px; color: var(--accent); font-weight: 700; }
+  .header-text h1 { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+  .header-text p { font-size: 12px; opacity: 0.9; margin-top: 2px; }
 
-  .container { max-width: 820px; margin: 0 auto; padding: 36px 20px 0; }
+  .container { max-width: 820px; margin: 0 auto; padding: 24px 16px 0; }
 
-  .card { background: var(--surface); border: none; border-radius: 12px; padding: 28px 32px; margin-bottom: 20px; box-shadow: var(--shadow); }
-  .card-title { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 700; color: var(--accent); display: flex; align-items: center; gap: 10px; margin-bottom: 24px; padding-bottom: 14px; border-bottom: 2px solid var(--bg); }
+  .card { background: var(--surface); border: none; border-radius: 12px; padding: 24px 20px; margin-bottom: 20px; box-shadow: var(--shadow); }
+  .card-title { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 700; color: var(--accent); display: flex; align-items: center; gap: 10px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--bg); }
   .card-title .icon { width: 32px; height: 32px; background: var(--accent-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
 
-  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .form-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
   .span-2 { grid-column: span 2; } .span-3 { grid-column: span 3; }
 
-  .field { display: flex; flex-direction: column; gap: 8px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
   .field label { font-size: 12px; font-weight: 700; color: var(--text-label); text-transform: uppercase; letter-spacing: 0.5px; }
   .field label .req { color: var(--error); margin-left: 2px; }
-  .field input, .field select, .field textarea { background: var(--surface2); border: none; border-radius: var(--radius); padding: 14px 16px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; color: var(--text); outline: none; width: 100%; transition: background 0.15s, box-shadow 0.15s; }
+  .field input, .field select, .field textarea { background: var(--surface2); border: none; border-radius: var(--radius); padding: 12px 14px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; color: var(--text); outline: none; width: 100%; transition: background 0.15s, box-shadow 0.15s; }
   .field input:focus, .field select:focus, .field textarea:focus { background: #fff; box-shadow: 0 0 0 2px rgba(44,95,46,0.15); }
   .field input::placeholder, .field textarea::placeholder { color: #999; }
   .field textarea { resize: vertical; min-height: 80px; }
@@ -46,10 +46,19 @@
   .field.has-error input, .field.has-error select, .field.has-error textarea { background: #fff0f0; box-shadow: inset 0 0 0 2px #ffcfcf; }
   .field.has-error .error-msg { display: block; }
 
+  /* Scrollable Table Wrapper */
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid transparent; /* Placeholder */
+    margin-bottom: 8px;
+  }
+
   /* Item table */
-  .item-table, .unit-table { width: 100%; }
+  .item-table, .unit-table { width: 100%; min-width: 650px; /* Force scroll on mobile */ }
   .item-header { display: grid; grid-template-columns: 30px 1fr 140px 120px 130px 36px; gap: 12px; align-items: center; padding: 0 4px 12px; border-bottom: 1px solid #eee; margin-bottom: 12px; }
-  .item-header span { font-size: 11px; font-weight: 800; color: var(--text-label); text-transform: uppercase; letter-spacing: 0.5px; }
+  .item-header span { font-size: 11px; font-weight: 800; color: var(--text-label); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
   .item-row { display: grid; grid-template-columns: 30px 1fr 140px 120px 130px 36px; gap: 12px; align-items: center; margin-bottom: 12px; animation: slideIn 0.2s ease; }
   @keyframes slideIn { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
   .item-no { font-size: 13px; font-weight: 700; color: var(--text-muted); text-align: center; }
@@ -61,7 +70,7 @@
 
   /* Unit table */
   .unit-header { display: grid; grid-template-columns: 28px 1fr 80px 110px 110px 110px 36px; gap: 10px; align-items: center; padding: 0 4px 10px; border-bottom: 1px solid #eee; margin-bottom: 10px; }
-  .unit-header span { font-size: 11px; font-weight: 800; color: var(--text-label); text-transform: uppercase; letter-spacing: 0.5px; }
+  .unit-header span { font-size: 11px; font-weight: 800; color: var(--text-label); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
   .unit-row { display: grid; grid-template-columns: 28px 1fr 80px 110px 110px 110px 36px; gap: 10px; align-items: center; margin-bottom: 10px; animation: slideIn 0.2s ease; }
   .unit-no { font-size: 13px; font-weight: 700; color: var(--text-muted); text-align: center; }
   .unit-row input { background: var(--surface2); border: none; border-radius: 6px; padding: 10px 12px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; color: #000; outline: none; width: 100%; }
@@ -73,21 +82,21 @@
   .btn-add-item:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
 
   /* Totals */
-  .totals { margin-top: 30px; margin-left: auto; width: 100%; max-width: 380px; border-top: 2px solid #000; padding-top: 15px; }
+  .totals { margin-top: 30px; margin-left: auto; width: 100%; max-width: 100%; border-top: 2px solid #000; padding-top: 15px; }
   .total-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 14px; color: #000; }
   .total-row.grand { margin-top: 15px; padding-top: 15px; border-top: 1px dashed #3b3b3b; font-size: 18px; font-weight: 800; }
   .total-label { font-weight: 500; } .total-value { font-weight: 600; font-variant-numeric: tabular-nums; }
   .total-row.grand .total-value { color: var(--accent); }
 
-  .ppn-control { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
-  .ppn-control input[type="number"] { width: 70px; padding: 8px 12px; border: none; background: var(--surface2); border-radius: 6px; font-size: 14px; outline: none; font-family: 'Plus Jakarta Sans', sans-serif; }
+  .ppn-control { display: flex; align-items: center; gap: 10px; margin-top: 4px; flex-wrap: wrap; }
+  .ppn-control input[type="number"] { width: 80px; padding: 8px 12px; border: none; background: var(--surface2); border-radius: 6px; font-size: 14px; outline: none; font-family: 'Plus Jakarta Sans', sans-serif; }
 
   .badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
   .badge-opt { padding: 8px 16px; border: 1px solid #ddd; border-radius: 20px; font-size: 13px; cursor: pointer; background: white; color: #666; transition: all 0.15s; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; }
   .badge-opt.active { background: var(--text); border-color: var(--text); color: white; }
 
-  .action-bar { display: flex; gap: 14px; justify-content: flex-end; margin-top: 12px; flex-wrap: wrap; }
-  .btn { padding: 14px 28px; border-radius: var(--radius); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: all 0.18s; display: flex; align-items: center; gap: 8px; }
+  .action-bar { position: sticky; bottom: 10px; z-index: 100; display: flex; gap: 12px; justify-content: flex-end; margin-top: 24px; flex-wrap: wrap; padding: 10px; background: rgba(244, 241, 235, 0.9); backdrop-filter: blur(8px); border-radius: 12px; box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,0.5); }
+  .btn { padding: 12px 24px; border-radius: var(--radius); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: all 0.18s; display: flex; align-items: center; justify-content: center; gap: 8px; flex: 1; white-space: nowrap; }
   .btn-secondary { background: white; border: 1px solid #ddd; color: var(--text); }
   .btn-secondary:hover { background: #f9f9f9; }
   .btn-primary { background: var(--text); color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
@@ -95,10 +104,10 @@
   .btn-print { background: var(--accent2); color: white; }
   .btn-print:hover { background: #a86e08; transform: translateY(-1px); }
 
-  #toast { position: fixed; bottom: 30px; right: 30px; background: #000; color: white; padding: 14px 24px; border-radius: 8px; font-size: 14px; font-weight: 500; box-shadow: var(--shadow-lg); opacity: 0; transform: translateY(10px); transition: all 0.3s; pointer-events: none; z-index: 999; display: flex; align-items: center; gap: 10px; }
-  #toast.show { opacity: 1; transform: translateY(0); }
+  #toast { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%) translateY(10px); background: #000; color: white; padding: 12px 24px; border-radius: 50px; font-size: 13px; font-weight: 500; box-shadow: var(--shadow-lg); opacity: 0; transition: all 0.3s; pointer-events: none; z-index: 999; display: flex; align-items: center; gap: 10px; width: max-content; max-width: 90%; text-align: center; }
+  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-  #preview-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 100; align-items: center; justify-content: center; padding: 20px; }
+  #preview-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
   #preview-overlay.open { display: flex; }
   .preview-box { background: white; border-radius: 16px; max-width: 700px; width: 100%; max-height: 90vh; overflow-y: auto; box-shadow: var(--shadow-lg); }
   .preview-header { padding: 24px 32px 16px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
@@ -109,8 +118,8 @@
   .preview-body th { background: #f4f4f4; color: #000; padding: 10px 12px; font-size: 12px; font-weight: 700; text-align: left; }
   .preview-body td { padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 13px; }
   .preview-body .grand-row td { font-weight: 700; background: #f9f9f9; }
-  .preview-kv { display: flex; gap: 12px; margin-bottom: 8px; }
-  .preview-kv .k { min-width: 160px; color: #777; font-size: 13px; }
+  .preview-kv { display: flex; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+  .preview-kv .k { min-width: 140px; color: #777; font-size: 13px; }
   .preview-kv .v { font-weight: 600; font-size: 13px; color: #000; }
   .preview-section-title { font-family: 'Fraunces', serif; font-size: 15px; color: #000; margin: 20px 0 10px; padding-bottom: 8px; border-bottom: 2px solid #eee; }
 
@@ -149,18 +158,29 @@
   .print-kop, .print-noref { display: none; visibility: hidden; height: 0; overflow: hidden; margin: 0; padding: 0; }
   .print-footer, .print-watermark { display: none !important; visibility: hidden; position: absolute; left: -9999px; }
 
-  @media (max-width: 640px) {
+  /* ══════════════════════════════
+     RESPONSIVE MEDIA QUERIES
+  ══════════════════════════════ */
+  @media (max-width: 768px) {
     .form-grid { grid-template-columns: 1fr; }
-    .form-grid.cols-3 { grid-template-columns: 1fr 1fr; }
+    .form-grid.cols-3 { grid-template-columns: 1fr; }
     .span-2, .span-3 { grid-column: span 1; }
-    .card { padding: 24px 20px; margin-bottom: 16px; }
-    .page-header { padding: 20px; }
-    .item-header, .item-row { grid-template-columns: 24px 1fr 80px 60px 80px 32px; gap: 6px; }
-    .unit-header, .unit-row { grid-template-columns: 24px 1fr 60px 80px 80px 80px 32px; gap: 6px; }
-    .action-bar { justify-content: stretch; }
-    .btn { flex: 1; justify-content: center; }
-    .totals { margin-left: 0; max-width: 100%; }
+    .card { padding: 20px 16px; margin-bottom: 16px; }
+    .page-header { padding: 20px 16px; }
+    
+    /* Signature Stack */
     .signature-grid { grid-template-columns: 1fr; }
+    
+    /* Action Bar Stack */
+    .action-bar { flex-wrap: wrap; padding: 8px; gap: 8px; }
+    .btn { flex: 1 1 100%; font-size: 14px; padding: 14px; }
+  }
+
+  @media (max-width: 480px) {
+    .container { padding: 16px 12px 0; }
+    .card { padding: 16px 12px; border-radius: 12px; }
+    .header-text h1 { font-size: 18px; }
+    .btn-add-item { font-size: 12px; padding: 10px; }
   }
 
   /* ═══════════════════════════════════════
@@ -171,7 +191,12 @@
     @page { size: A4 portrait; margin: 16mm 14mm 22mm 14mm; }
     html, body { margin: 0; padding: 0; background: white !important; overflow: visible !important; }
     .page-header, .action-bar, .btn-remove, .btn-remove-unit, .btn-add-item,
-    .ppn-control label:last-child, #preview-overlay, .field .hint, .field .error-msg, .badge-row { display: none !important; }
+    .ppn-control label:last-child, #preview-overlay, .field .hint, .field .error-msg, .badge-row, .table-responsive { display: none !important; }
+    
+    /* Allow content to flow freely */
+    .table-responsive { overflow: visible !important; border: none !important; margin: 0 !important; display: block !important; }
+    .item-table, .unit-table { min-width: 100% !important; width: 100% !important; }
+
     .container { max-width: 100%; padding: 0; margin: 0; }
 
     .print-watermark { display: block !important; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 280px; height: 280px; z-index: 0; pointer-events: none; }
@@ -218,8 +243,6 @@
 
     /* ══════════════════════════════════════
        SIGNATURE PRINT — paksa horizontal
-       Pakai table layout karena grid
-       tidak selalu berjalan di semua browser
     ══════════════════════════════════════ */
     .signature-grid {
       display: table !important;
@@ -374,25 +397,35 @@
   <!-- 4. UNIT -->
   <div class="card">
     <div class="card-title"><div class="icon">⚙️</div>Data Unit / Pengerjaan</div>
-    <div class="unit-table">
-      <div class="unit-header">
-        <span>#</span><span>Nama Unit / Jasa</span><span style="text-align:center">Qty</span>
-        <span>No. Seri</span><span>Tahun</span><span>Lokasi</span><span></span>
+    
+    <!-- Wrapper added for scrolling -->
+    <div class="table-responsive">
+      <div class="unit-table">
+        <div class="unit-header">
+          <span>#</span><span>Nama Unit / Jasa</span><span style="text-align:center">Qty</span>
+          <span>No. Seri</span><span>Tahun</span><span>Lokasi</span><span></span>
+        </div>
+        <div id="unit-rows"></div>
       </div>
-      <div id="unit-rows"></div>
     </div>
-    <button class="btn-add-item" style="margin-top:10px;" onclick="addUnit()"><span>＋</span> Tambah Unit / Mesin</button>
+    
+    <button class="btn-add-item" onclick="addUnit()"><span>＋</span> Tambah Unit / Mesin</button>
   </div>
 
   <!-- 5. ITEM -->
   <div class="card">
     <div class="card-title"><div class="icon">🔧</div>Detail Item Harga / Service Jasa</div>
-    <div class="item-table">
-      <div class="item-header">
-        <span>#</span><span>Nama Pekerjaan / Deskripsi</span><span>Nama Unit</span><span>Qty</span><span>Harga (Rp)</span><span></span>
+    
+    <!-- Wrapper added for scrolling -->
+    <div class="table-responsive">
+      <div class="item-table">
+        <div class="item-header">
+          <span>#</span><span>Nama Pekerjaan / Deskripsi</span><span>Nama Unit</span><span>Qty</span><span>Harga (Rp)</span><span></span>
+        </div>
+        <div id="item-rows"></div>
       </div>
-      <div id="item-rows"></div>
     </div>
+
     <button class="btn-add-item" onclick="addItem()"><span>＋</span> Tambah Item</button>
 
     <div class="field" style="margin-top:20px;flex-direction:row;align-items:center;gap:12px;">
